@@ -1,0 +1,1 @@
+http://editor.surveyjs.io/license.html
