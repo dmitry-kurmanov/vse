@@ -26,6 +26,20 @@ module.exports = function(options) {
         resolve: {
             extensions: ['.vue', '.js']
         },
+        externals: {
+            'vue': {
+                root: 'Vue',
+                commonjs2: 'vue',
+                commonjs: 'vue',
+                amd: 'vue'
+            },
+            'vuex': {
+                root: 'vuex',
+                commonjs2: 'vuex',
+                commonjs: 'vuex',
+                amd: 'vuex'
+            }
+        },
         module: {
             rules: [
                 {
