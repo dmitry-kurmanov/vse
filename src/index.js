@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Editor from './Editor.vue'
+import App from './App.vue'
 import store from './store'
 
 export class Instance {
@@ -7,7 +7,7 @@ export class Instance {
         this.editor = new Vue({
             el: rootSelector,
             store,
-            render: h => h( Editor, {
+            render: h => h( App, {
                 props: {
                     options: options
                 }

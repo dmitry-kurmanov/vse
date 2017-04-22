@@ -11,18 +11,19 @@ const store = new Vuex.Store({
                     name: "page1"
                 }
             ]
-        }
-    }/*,
+        },
+        currentTab: 'designer' // ['designer', 'json', 'test', 'embed']
+    },/*,
     getters: {
         todosBySelectedDate: (state, getters) => {
             return state.todos.filter(todo => todo.date === state.selectedDate)
         }
-    },
-    mutations: {
-        changeSelectedDate (state, newDate) {
-            state.selectedDate = newDate
-        }
     }*/
+    mutations: {
+        changeCurrentTab (state, newTab) {
+            state.currentTab = newTab
+        }
+    }
 })
 
 export default store
