@@ -18,7 +18,7 @@ module.exports = function(options) {
         entry: path.join(__dirname, './src/index.js'),
         output: {
             path: path.join(__dirname, `./${outputFolder}`),
-            filename: 'surveyjs-editor-vue.js'
+            filename: `surveyjs-editor-vue.${options.buildType === 'prod' ? 'min.': ''}js`
         },
         resolve: {
             extensions: ['.vue', '.js']
