@@ -49,7 +49,8 @@ module.exports = function(options) {
         plugins: [
             new webpack.BannerPlugin(copyright),
             new HTMLPlugin({
-                template: './template.html'
+                template: './template.html',
+                inject: 'head'
             }),
             new FriendlyErrorsWebpackPlugin()
         ],
