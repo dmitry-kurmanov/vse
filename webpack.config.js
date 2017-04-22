@@ -26,20 +26,6 @@ module.exports = function(options) {
         resolve: {
             extensions: ['.vue', '.js']
         },
-        externals: {
-            'vue': {
-                root: 'Vue',
-                commonjs2: 'vue',
-                commonjs: 'vue',
-                amd: 'vue'
-            },
-            'vuex': {
-                root: 'vuex',
-                commonjs2: 'vuex',
-                commonjs: 'vuex',
-                amd: 'vuex'
-            }
-        },
         module: {
             rules: [
                 {
@@ -68,6 +54,20 @@ module.exports = function(options) {
             }),
             new FriendlyErrorsWebpackPlugin()
         ],
+        externals: {
+            'vue': {
+                root: 'Vue',
+                commonjs2: 'vue',
+                commonjs: 'vue',
+                amd: 'vue'
+            },
+            'vuex': {
+                root: 'Vuex',
+                commonjs2: 'vuex',
+                commonjs: 'vuex',
+                amd: 'vuex'
+            }
+        },
         devtool: options.buildType === 'prod' ? 'source-map' : 'inline-source-map',
         devServer: {
             contentBase: path.join(__dirname, outputFolder),
