@@ -15,3 +15,9 @@ export class Instance {
         })
     }
 }
+
+
+export { default as Designer } from './views/Designer.vue'
+export { default as Json } from './views/Json.vue'
+export { default as Test } from './views/Test.vue'
+export { default as Embed } from './views/Embed.vue'

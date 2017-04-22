@@ -1,14 +1,14 @@
 <template>
     <div>
-        <button data-value="designer" @click="changeTab">Survey Designer</button>
-        <button data-value="json" @click="changeTab">JSON Editor</button>
-        <button data-value="test" @click="changeTab">Test Survey</button>
-        <button data-value="embed" @click="changeTab">Embed Survey</button>
+        <button data-value="designer" @click="changeTab"> Survey Designer </button>
+        <button data-value="json" @click="changeTab"> JSON Editor </button>
+        <button data-value="test" @click="changeTab"> Test Survey </button>
+        <button data-value="embed" @click="changeTab"> Embed Survey </button>
 
-        <div v-show="$store.state.currentTab === 'designer'"> Survey Designer </div>
-        <div v-show="$store.state.currentTab === 'json'"> JSON Editor </div>
-        <div v-show="$store.state.currentTab === 'test'"> Test Survey </div>
-        <div v-show="$store.state.currentTab === 'embed'"> Embed Survey </div>
+        <vse-designer-view v-show="$store.state.currentTab === 'designer'"/>
+        <vse-json-view v-show="$store.state.currentTab === 'json'"/>
+        <vse-test-view v-show="$store.state.currentTab === 'test'"/>
+        <vse-embed-view v-show="$store.state.currentTab === 'embed'"/>
     </div>
 </template>
 
