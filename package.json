@@ -38,6 +38,7 @@
     "webpack-dev-server": "^2.2.0"
   },
   "dependencies": {
+    "survey-vue": "^0.12.12",
     "vue": "^2.1.10",
     "vuex": "^2.2.1"
   }

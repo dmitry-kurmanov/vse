@@ -1,7 +1,7 @@
 <template>
     <div>
         <textarea class="json-editor" @blur="changeJSON" >
-            {{$store.state.json}}
+            {{jsonString}}
         </textarea>
     </div>
 </template>
@@ -11,12 +11,16 @@
     import Component from 'vue-class-component'
 
     @Component
-    export default class JSON extends Vue {
+    export default class Json extends Vue {
+        get jsonString () {
+            return JSON.stringify(this.$store.state.json);
+        }
+
         changeJSON (e) {
-            this.$store.commit('changeJSON', e.target.value)
+            this.$store.commit('changeJSON', JSON.parse(e.target.value))
         }
     }
-    Vue.component("vse-json-view", JSON)
+    Vue.component("vse-json-view", Json)
 </script>
 
 <style scoped>

@@ -1,18 +1,38 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+//Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        json: `
-        {
+        json: {
             pages: [
                 {
-                    name: "page1"
+                    elements: [
+                        {
+                            type: "checkbox",
+                            name: "car",
+                            title: "What car are you driving?",
+                            isRequired: true,
+                            choices: [
+                                "None",
+                                "Ford",
+                                "Vauxhall",
+                                "Volkswagen",
+                                "Nissan",
+                                "Audi",
+                                "Mercedes-Benz",
+                                "BMW",
+                                "Peugeot",
+                                "Toyota",
+                                "Citroen"
+                            ],
+                            colCount: 4
+                        }
+                    ]
                 }
             ]
-        }`,
+        },
         currentTab: 'designer' // ['designer', 'json', 'test', 'embed']
     },
     // getters: {
