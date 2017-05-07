@@ -1,5 +1,6 @@
 <template>
     <div>
+        <button @click="rerunSurvey">rerun survey</button>
         <survey :survey='model'/>
     </div>
 </template>
@@ -11,8 +12,14 @@
 
     @Component
     export default class Test extends Vue {
+        modelValue = null
         get model () {
-            return new Survey.Model(this.$store.state.json);
+            this.modelValue = new Survey.Model(this.$store.state.json)
+            return this.modelValue;
+        }
+
+        rerunSurvey () {
+            this.modelValue = new Survey.Model(this.$store.state.json)
         }
     }
     Vue.component("vse-test-view", Test)

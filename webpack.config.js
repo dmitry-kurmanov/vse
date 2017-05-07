@@ -66,6 +66,12 @@ module.exports = function(options) {
                 commonjs2: 'vuex',
                 commonjs: 'vuex',
                 amd: 'vuex'
+            },
+            'survey-vue': {
+                root: 'Survey',
+                commonjs2: 'survey-vue',
+                commonjs: 'survey-vue',
+                amd: 'survey-vue'
             }
         },
         devtool: options.buildType === 'prod' ? 'source-map' : 'inline-source-map',
